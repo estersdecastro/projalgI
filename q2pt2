@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{   
+    vector<int> lista;
+    int i, numero;
+    
+    // pega os valores pra lista
+    for (i = 0; i < 10; i++) {
+        cout << "Digite um número: ";
+        cin >> numero;
+        lista.push_back(numero);
+    }
+    
+    // percorre a lista procurando os negativos
+    int negativos = 0;
+    vector<int> positivos;
+    
+    for (i = 0; i < lista.size(); i++) {
+        if (lista[i] >= 0) {  
+            positivos.push_back(lista[i]); 
+        } else {  
+            negativos += lista[i]; 
+        }
+    }
+    
+    // resultado
+    cout << "Soma dos negativos: " << negativos << endl;
+    cout << "Números positivos: ";
+    for (int j = 0; j < positivos.size(); j++) { 
+        cout << positivos[j] << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
