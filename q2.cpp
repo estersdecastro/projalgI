@@ -1,26 +1,28 @@
 #include <iostream>
 #include <vector>
+using namespace std;
 
 int main()
 {
-    int i, resto
-    resto = numero % 2
-    vector<int> pares
-    vector<int> impares
-    
+    vector<int> positivos; 
+    vector<int> negativos; 
+    int i, numero;
+
     for (i=0; i<10; i++) 
     {
-        cout<<"Digite um número: "
-        cin>>numero
-        if (resto==0)
+        cout<<"Digite um número: ";
+        cin>>numero;
+        if (numero>=0)
         {
-            pares tal tal
+            positivos.push_back(numero);
         }
         else 
         {
-            impares tal tal 
+            negativos.push_back(numero);
+            
         }
     }
     
-    
+    cout<<positivos.size()<<" positivos"<<endl;
+    cout<<negativos.size()<<" negativos";
 }
